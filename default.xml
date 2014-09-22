@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <!-- shorthand for repos to fetch -->
+   <remote fetch="git://github.com/" name="github"/>
+   <remote fetch="git://git.yoctoproject.org/" name="yocto"/>
+   <remote fetch="git://git.enea.com/linux/" name="enea"/>
+   <remote fetch="git://git.openembedded.org/" name="oe"/>
+   <!-- remote fetch="" name=""/ -->
+
+   <!-- what're we going to choose in the absense of anything else -->
+   <default remote="github" revision="refs/heads/master" sync-j="4"/>
+
+   <project remote="yocto" name="poky" path="yocto-mainline" />
+   <project remote="oe" name="meta-openembedded" path="meta-openembedded" />
+   <project remote="yocto" name="meta-selinux" path="meta-selinux" />
+   <project remote="yocto" name="meta-security" path="meta-security" />
+
+   <!-- CGL-layers -->
+   <project remote="enea" name="meta-cgl" path="cgl/meta-cgl" />
+   <project remote="yocto" name="meta-qt3" path="cgl/meta-qt3" />
+   <project remote="yocto" name="meta-virtualization" path="cgl/meta-virtualization" />
+   <project remote="yocto" name="meta-cloud-services" path="cgl/meta-cloud-services" />
+   <project remote="github" name="joaohf/meta-openclovis" path="cgl/meta-openclovis" />
+
+   <!-- project remote="" name="" path="" /-->
+
+</manifest>
